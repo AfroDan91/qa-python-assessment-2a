@@ -217,13 +217,21 @@ def seven(a, b, c):
     # Use the cli to access the documentation help(str.replace)
 
 def eight(string, num):
-    if len(string)%2 == 0:
-        middle = len(string) / 2
-    else:
-        middle = (len(string) // 2) + 1
-    
+    start_point = int((len(string)/2) - (num /2))
+    end_point = int((len(string)/2) + (num /2))
 
-    return ""
+    st= string[:start_point]
+    ri= string[end_point:]
+    print(st)
+    return st + ri
+
+
+    # if string % 2 == 0:
+    #     mid = string / 2
+    # else:
+    #     mid = (string // 2) + 1
+
+
 
     # <QUESTION 9>
 
