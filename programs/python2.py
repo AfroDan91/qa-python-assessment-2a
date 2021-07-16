@@ -30,7 +30,15 @@
     # How does a for loop iterate through a string?
 
 def one(string):
-    return ""
+    list1 = []
+    for i in string:
+        list1.append(i)
+        list1.append(i)
+        list1.append(i)
+    
+    string = "".join(list1)
+
+    return string
 
     # <QUESTION 2>
 
@@ -48,7 +56,13 @@ def one(string):
     # Use your CLI to access the Python documentation and get help manipulating strings - help(range).
 
 def two(num):
-    return False
+    for i in range(1, (num-1)):
+        if num%i == 0:
+            return False
+        else:
+            return True
+
+    
 
     # <QUESTION 3>
 
@@ -65,7 +79,8 @@ def two(num):
     # What happens if you multiply a string by a number?
 
 def three(a):
-    return 1
+     
+    return a + (a*11) + (a*111) + (a*1111)
 
     # <QUESTION 4>
 
@@ -94,7 +109,21 @@ def three(a):
     # How would you seperate a string into characters?
 
 def four(string1, string2):
-    return ""
+    list1 = []
+    list2 = []
+    list3 = []
+    for i in string1:
+        list1.append(i)
+
+    for i in string2:
+        list2.append(i)
+
+    for num in range(len(string1)):
+        list3.append(list1[num])
+        list3.append(list2[num])
+
+
+    return "".join(list3)
 
     # <QUESTION 5>
 
@@ -111,7 +140,12 @@ def four(string1, string2):
     # The random module contains a function called randint.
 
 def five():
-    return []
+    import random
+    list1 = []
+    for i in range(5):
+        list1.append(random.randrange(100, 200, 2))
+
+    return list1
 
     # <QUESTION 6>
 
@@ -130,7 +164,11 @@ def five():
     # There are no hints for this question.
     
 def six(string):
-    return False
+    a = string.lower()
+    if a.endswith('py') == True:
+        return True
+    else:
+        return False
 
     # <QUESTION 7>
 
@@ -154,7 +192,16 @@ def six(string):
     # Use the cli to access the documentation help(list.sort)
 
 def seven(a, b, c):
-    return False
+
+    list1 = []
+    list1.append(a)
+    list1.append(b)
+    list1.append(c)
+    list2 = sorted(list1)
+    if list2[1] - list2[0] == list2[2] - list2[1]:
+        return True
+    else:
+        return False
 
     # <QUESTION 8>
 
@@ -172,6 +219,12 @@ def seven(a, b, c):
     # Use the cli to access the documentation help(str.replace)
 
 def eight(string, num):
+    if len(string)%2 == 0:
+        middle = len(string) / 2
+    else:
+        middle = (len(string) // 2) + 1
+    
+
     return ""
 
     # <QUESTION 9>
@@ -189,6 +242,33 @@ def eight(string, num):
     # There are no hints for this question.
 
 def nine(string1, string2):
+    lb = []
+    ls = []
+    list1 = []
+    if len(string1) > len(string2):
+        big = string1
+        sm = string2
+    else:
+        big = string2
+        sm = string1
+
+    for i in big:
+        lb.append(i)
+    for j in sm:
+        ls.append(i)
+
+    for i in sm:
+        if i in big:
+            list1.append(i)
+    
+    if len(list1) == len(ls):
+        return True
+    else:
+        return False
+
+    
+
+    
     return False
 
     # <QUESTION 10>
