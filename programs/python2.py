@@ -56,12 +56,10 @@ def one(string):
     # Use your CLI to access the Python documentation and get help manipulating strings - help(range).
 
 def two(num):
-    for i in range(1, (num-1)):
-        if num%i == 0:
-            return False
-        else:
-            return True
-
+        for x in range(2,num):
+            if num % x == 0:
+                return False
+        return True
     
 
     # <QUESTION 3>
@@ -287,4 +285,8 @@ def nine(string1, string2):
     # Think about nesting for loops.
 
 def ten(a, b):
-    return []
+    rows, cols = (b, a)
+    arr = [[0]*cols]*rows
+    print(arr)
+
+    return 
